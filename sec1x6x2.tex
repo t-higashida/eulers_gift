@@ -1,0 +1,75 @@
+\subsection{無限数列の和}
+
+等比数列の第$n$項までの和を求める式を得たが，これは有限数列の和である．
+ここでは無限個の和，すなわち無限等比数列の形式的な和
+\[
+	S	=	\sum_{n=0}^{\infty}	p^n	=	1+	p	+	p^2	+	\cdots	
+\]
+を考えよう．これを\textbf{無限級数（infinite series）}，あるいは
+\textbf{無限等比級数}と呼ぶ．
+
+まず，有限和の式を変形して
+\[
+	I	=	\frac{1-p^{n+1}}{1-p}	=	\frac{1}{1-p}	-	\frac{p^{n+1}}{1-p}.
+\]
+これを第$n$項までの和の意味で\textbf{第$n$部分和（$n$ th partial sum）}と呼ぶ．
+添字$n$を動かすことにより，部分和を項とする数列$I_n$を作る．すなわち
+\begin{align*}
+	I_0	&\equiv	1						&=	\frac{1}{1-p}	-	\frac{p}{1-p},	\\
+	I_1	&\equiv	1	+	p				&=	\frac{1}{1-p}	-	\frac{p^2}{1-p},	\\
+	I_2	&\equiv	1	+	p	+	p^2	&=	\frac{1}{1-p}	-	\frac{p^3}{1-p},	\\
+			&\vdots							&	\\
+	I_n	&\equiv	1	+	p	+	p^2	+	\cdots	+	p^n	&=	\frac{1}{1-p}	-	\frac{p^{n+1}}{1-p}
+\end{align*}
+により$I_n$を定義する．
+
+さて，この数列において，$n	\to	\infty$のとき$I_n$が収束し，極限値$\alpha$をもつならば，
+無限数列$S$も収束し，その極限値$\alpha$が無限数列の和を与えると定義しよう
+\footnote{
+この和の定義は\textbf{コーシー（A.L.Cauchy,1789-1857)}による．
+}
+
+
+そこで，$I_n$の極限について調べると
+\begin{align*}
+		\lim_{n\rightarrow\infty}	I_n	
+&=	\lim_{n\rightarrow\infty}
+	\left(	\frac{1}{1-p}	-	\frac{p^{n+1}}{1-p}
+	\right)	\\
+&=	\frac{1}{1-p}	-	\frac{p}{1-p}	\lim_{n\rightarrow\infty}	p^n.
+\end{align*}
+第2項は$|p|	<	1$のとき$0$に収束するので，極限値は
+\[
+	\lim_{n\rightarrow\infty}	I_n	=	\frac{1}{1-p}
+\]
+となる．（$p$が上記範囲にないときには発散する．）この数列$I_n$の極限値が，
+もとの無限級数の和$S$を
+\[
+	S	=	\sum_{n=0}^{\infty}	p^n	=	\frac{1}{1-p},	\quad	\text{（ただし，$|p|	<1$）}
+\]
+と定める．
+
+この場合，級数$S$の第$n$項$p^n$が$p	\rightarrow	\infty$のとき，$0$に収束することが必要であるが，
+逆に第$n$項の収束性だけで級数が収束することは言えない
+\footnote{
+	問題8参照.
+}．
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

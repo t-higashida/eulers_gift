@@ -1,0 +1,56 @@
+\subsection{二項定理}
+
+階乗の記号を用いて，二項係数は
+\[
+	\binom{n}{r}	\equiv	\frac{n!}{r!	(n-r)!}
+\]
+と表される．これは，相異なる$n$個のものから，$r$個を取る
+\textbf{組合せ(combination)}の総数を示す．
+\footnote{付録：A.7『順列と組合せ』の項参照．}
+記号$\displaystyle	\binom{n}{r}$を用いて，二項展開は
+\[
+	(a+b)^n	=	\binom{n}{0}	a^n	+	\binom{n}{1}	a^{n-1}b+	\binom{n}{2}	a^{n-2}b^2	+	\cdots	+	\binom{n}{n}b^n
+\]
+と整理できる．いくつかの項を具体的に計算すると
+\begin{align*}
+	\binom{n}{0}	&=	\frac{n!}{0!	(n-0)!}	=	\frac{n!}{n!}	=	1,	\\
+	\binom{n}{1}	&=	\frac{n!}{1!	(n-1)!}	=	\frac{1	\times	2	\times	\cdots	\times	(n-1)	\times	n}{1	\times	[1	\times	2	\times	\cdots	\times	(n-1)]	}	=	n,	\\
+	\binom{n}{2}	&=	\frac{n!}{2!	(n-2)!}	=	\frac{1	\times	2	\times	\cdots	\times	(n-1)	\times	n}{2!	\times	[1	\times	2	\times	\cdots	\times	(n-2)]	}	=	\frac{n(n-1)}{2},	\\
+	\cdots	\\
+	\binom{n}{n}	&=	\frac{n!}{n!(n-n)!}	=	\frac{1}{0!}	=1
+\end{align*}
+これらを$(a+b)^n$に\textbf{代入（substitution）}して
+\[
+	(a+b)^n	=	a^n	+	na^{n-1}	b	+	\frac{1}{2}n(n-1)	a^{n-2}b^2	+	\cdots	+	b^n
+\]
+を得る．これは\textbf{総和の記号$\sum$（summation sign）}を用いて
+\[
+	(a	+	b)^n	=	\sum_{k=0}^n	\binom{n}{k}	a^{n-k}b^k
+\]
+と略記される．
+\footnote{添字$k$は\textbf{無効添字（dummy suffix）}と呼ばれるもので，
+結果に無関係なので他の文字と重複しなければ何を用いてもよい．
+}
+上式を\textbf{二項定理（binomial theorem）}と呼ぶ
+\footnote{付録：『数学的帰納法と帰謬法』の項参照．}
+パスカルの三角形の構造を二項係数を用いて確認しておこう．
+第$k$項と第$(k+1)$項の二項係数の和を，定義にしたがって計算すると
+\begin{align*}
+	\binom{n}{k}	+	\binom{n}{k+1}
+&=	\frac{n!}{k!(n-k)!}	+	\frac{n!}{(k+1)![n-(k+1)]!}	\\
+&=	\frac{n!}{(1	\times	2	\times	\cdots	\times	k)	\times	[1	\times	2	\times	\cdots	\times	(n-k-1)	\times	(n-k)]}	\\
+&	\quad
+	+	\frac{n!}{[1	\times	2	\times	\cdots	\times	k	\times	(k+1)]	\times	[	1	\times	2	\times	\cdots	\times	(n-k-1)]}	\\
+&=	\frac{(k+1)	\times	n!}{(1	\times	2	\times	\cdots	\times	k	\times	(k+1))	\times	[1	\times	2	\times	\cdots	\times	(n-k-1)	\times	(n-k)]}	\\
+&	\quad
+	+	\frac{(n-k)	\times	n!}{[1	\times	2	\times	\cdots	\times	k	\times	(k+1)]	\times	[	1	\times	2	\times	\cdots	\times	(n-k-1)	\times	(n-k)]}	\\
+&=	\frac{(k+1)	\times	n!}{(k+1)!	(n-k)!}	+	\frac{(n-k)	\times	n!}{(k+1)!	(n-k)!}	\\
+&=	\frac{(k+1	+		n	-k)	\times	n!}{(k+1)!(n-k)!}	=	\frac{n!	\times	(n+1)}{(k+1)!	(n-k)!}	\\
+&=	\frac{(n+1)!}{(k+1)!(n-k)!}	=	\frac{(n+1)!}{(k+1)!	[	(n+1)	-	(k+1)]!}
+	=	\binom{n+1}{k+1}
+\end{align*}
+となる．すなわち，二項係数の相互関係
+\[
+	\binom{n}{k}	+	\binom{n}{k+1}	=	\binom{n+1}{k+1},	\quad	(k=0,1,2,	\cdots	,	n)
+\]
+が三角形の構造を決める．

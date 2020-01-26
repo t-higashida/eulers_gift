@@ -1,0 +1,12 @@
+\contentsline {chapter}{まえがき}{iii}
+\contentsline {chapter}{\numberline {第1章}パスカルの三角形}{1}
+\contentsline {section}{\numberline {1.1}数の種類}{1}
+\contentsline {section}{\numberline {1.2}二項展開とパスカルの三角形}{2}
+\contentsline {subsection}{\numberline {1.2.1}計算の法則}{2}
+\contentsline {subsection}{\numberline {1.2.2}二項定理}{3}
+\contentsline {section}{\numberline {1.3}パスカルの三角形に色を塗る}{5}
+\contentsline {section}{\numberline {1.4}無限数列とその極限}{6}
+\contentsline {section}{\numberline {1.5}収束の判定法}{7}
+\contentsline {section}{\numberline {1.6}数列の和}{8}
+\contentsline {subsection}{\numberline {1.6.1}パスカルの三角形と数の和}{8}
+\contentsline {subsection}{\numberline {1.6.2}無限数列の和}{9}

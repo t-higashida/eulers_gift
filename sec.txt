@@ -1,0 +1,9 @@
+sec0.tex
+sec1.tex
+sec1x2.tex
+sec1x2x2.tex
+sec1x3.tex
+sec1x4.tex
+sec1x5.tex
+sec1x6.tex
+sec1x6x2.tex
